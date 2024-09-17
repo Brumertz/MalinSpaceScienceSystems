@@ -1,0 +1,6 @@
+C:\Users\godwis\Source\Repos\AstroMaths\bin\Debug\AstroMaths.dll
+C:\Users\godwis\Source\Repos\AstroMaths\bin\Debug\AstroMaths.pdb
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Debug\AstroMaths.csproj.AssemblyReference.cache
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Debug\AstroMaths.csproj.CoreCompileInputs.cache
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Debug\AstroMaths.dll
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Debug\AstroMaths.pdb

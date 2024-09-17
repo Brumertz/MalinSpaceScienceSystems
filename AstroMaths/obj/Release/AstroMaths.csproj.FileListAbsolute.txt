@@ -1,0 +1,31 @@
+C:\Users\godwis\Source\Repos\AstroMaths\bin\Release\AstroMaths.dll
+C:\Users\godwis\Source\Repos\AstroMaths\bin\Release\AstroMaths.pdb
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Release\AstroMaths.dll
+C:\Users\godwis\Source\Repos\AstroMaths\obj\Release\AstroMaths.pdb
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\bin\Release\AstroMaths.dll
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\bin\Release\AstroMaths.pdb
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.AssemblyReference.cache
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\obj\Release\AstroMaths.dll
+C:\Users\smg\Desktop\ipc-3\3rdParty\AstroMaths\obj\Release\AstroMaths.pdb
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.dll
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.pdb
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.AssemblyReference.cache
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.dll
+H:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.pdb
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.dll
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.pdb
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.AssemblyReference.cache
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.dll
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.pdb
+E:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.xml
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.xml
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.dll
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\bin\Release\AstroMaths.pdb
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.AssemblyReference.cache
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.dll
+D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.pdb
