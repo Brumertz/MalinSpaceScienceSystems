@@ -28,11 +28,18 @@ namespace AstroMaths
         /// Barnard's Star has parallax angle of 0.547 arcseconds and has 
         /// a distance = 1.83 parsec
         /// </summary>
-        /// <param name="angle">parallex angle in arcsecs (1/3600 degrees)</param>
+        /// <param name="parallaxAngle">parallex angle in arcsecs (1/3600 degrees)</param>
         /// <returns>Distance in parsecs</returns>
-        public double StarDistance(double angle)
+        public double StarDistance(double parallaxAngle)
         {
-            return 1 / angle;
+            if (parallaxAngle <= 0)
+            {
+                throw new ArgumentOutOfRangeException("parallaxAngle", "Parallax angle must be greater than zero.");
+            }
+
+            // 1 parsec = 1 / parallax angle in arcseconds
+            double distance = 1 / parallaxAngle;
+            return distance;
         }
         /// <summary>
         /// Returns the temperature in degrees Kelvin. refered to as
@@ -43,7 +50,14 @@ namespace AstroMaths
         /// <returns>Temperature in degrees Kelvin</returns>
         public double Kelvin(double celsius)
         {
-            return celsius + 273;
+            const double kelvinOffset = 273.15;
+            if (celsius < -273.15)
+            {
+                throw new ArgumentOutOfRangeException("celsius", "Temperature cannot be less than absolute zero (-273.15°C).");
+            }
+
+            double kelvin = celsius + kelvinOffset;
+            return kelvin;
         }
         /// <summary>
         /// Returns the balck hole event horizon in metres. This is the Schwarzschild Radius 

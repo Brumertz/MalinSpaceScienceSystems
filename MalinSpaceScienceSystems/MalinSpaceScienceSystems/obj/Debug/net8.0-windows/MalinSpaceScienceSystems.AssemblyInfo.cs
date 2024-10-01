@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MalinSpaceScienceSystems")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+952b31559213d90440df5e467544561120d0da31")]
 [assembly: System.Reflection.AssemblyProductAttribute("MalinSpaceScienceSystems")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MalinSpaceScienceSystems")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

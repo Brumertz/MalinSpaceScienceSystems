@@ -29,3 +29,10 @@ D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMa
 D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
 D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.dll
 D:\@ Complex Data Structures\AT2 Project\3rdParty\AstroMaths\obj\Release\AstroMaths.pdb
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\bin\Release\AstroMaths.xml
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\bin\Release\AstroMaths.dll
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\bin\Release\AstroMaths.pdb
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\obj\Release\AstroMaths.csproj.AssemblyReference.cache
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\obj\Release\AstroMaths.csproj.CoreCompileInputs.cache
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\obj\Release\AstroMaths.dll
+C:\Users\30085204\Documents\30085204\MalinSpaceScienceSystems\AstroMaths\obj\Release\AstroMaths.pdb

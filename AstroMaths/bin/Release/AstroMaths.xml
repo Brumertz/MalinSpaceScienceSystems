@@ -27,7 +27,7 @@
             Barnard's Star has parallax angle of 0.547 arcseconds and has 
             a distance = 1.83 parsec
             </summary>
-            <param name="angle">parallex angle in arcsecs (1/3600 degrees)</param>
+            <param name="parallaxAngle">parallex angle in arcsecs (1/3600 degrees)</param>
             <returns>Distance in parsecs</returns>
         </member>
         <member name="M:AstroMaths.AstroMathFunctions.Kelvin(System.Double)">
