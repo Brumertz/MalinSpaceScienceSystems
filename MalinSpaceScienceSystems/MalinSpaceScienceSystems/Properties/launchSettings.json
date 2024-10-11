@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "MalinSpaceScienceSystems": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable"
+    },
+    "Profile 2": {
+      "commandName": "Executable"
+    }
+  }
+}

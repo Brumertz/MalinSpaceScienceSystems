@@ -1,0 +1,8 @@
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.csproj.AssemblyReference.cache
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.Form1.resources
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.csproj.GenerateResource.cache
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.AssemblyInfoInputs.cache
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.AssemblyInfo.cs
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.csproj.CoreCompileInputs.cache
+C:\Users\BrumertzTafe\Downloads\MalinSpaceScienceSystems\MalinSpaceScienceSystems\MalinSpaceScienceSystems\obj\Release\net8.0-windows\MalinSpaceScienceSystems.sourcelink.json

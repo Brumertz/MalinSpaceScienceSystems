@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 using AstroMaths;
 
 namespace AstroService
@@ -12,18 +13,19 @@ namespace AstroService
     [ServiceContract]
     public interface IAstroContract
     {
-       
-            [OperationContract]
-            double CalculateStarVelocity(double observedWavelength, double restWavelength);
 
-            [OperationContract]
-            double CalculateStarDistance(double parallaxAngle);
+        [OperationContract]
+        double CalculateStarVelocity(double observedWavelength, double restWavelength);
 
-            [OperationContract]
-            double ConvertToKelvin(double celsius);
+        [OperationContract]
+        double CalculateStarDistance(double parallaxAngle);
 
-            [OperationContract]
-            double CalculateEventHorizon(double blackHoleMass);
+        [OperationContract]
+        double ConvertToKelvin(double celsius);
+
+        [OperationContract]
+        double CalculateEventHorizon(double blackHoleMass);
+
         
     }
 

@@ -17,7 +17,7 @@ namespace ServiceReference1
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAstroContract/CalculateStarVelocity", ReplyAction="http://tempuri.org/IAstroContract/CalculateStarVelocityResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.CalculateStarVelocityResponse> CalculateStarVelocityAsync(ServiceReference1.CalculateStarVelocityRequest request);
+        System.Threading.Tasks.Task<ServiceReference1.CalculateStarVelocityResponse> CalculateStarVelocityAsync(double observedWaveLength, ServiceReference1.CalculateStarVelocityRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAstroContract/CalculateStarDistance", ReplyAction="http://tempuri.org/IAstroContract/CalculateStarDistanceResponse")]
         System.Threading.Tasks.Task<ServiceReference1.CalculateStarDistanceResponse> CalculateStarDistanceAsync(ServiceReference1.CalculateStarDistanceRequest request);
@@ -27,6 +27,7 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAstroContract/CalculateEventHorizon", ReplyAction="http://tempuri.org/IAstroContract/CalculateEventHorizonResponse")]
         System.Threading.Tasks.Task<ServiceReference1.CalculateEventHorizonResponse> CalculateEventHorizonAsync(ServiceReference1.CalculateEventHorizonRequest request);
+        object CalculateStarVelocityAsync(CalculateStarVelocityRequest calculateStarVelocityRequest);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -191,38 +192,5 @@ namespace ServiceReference1
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public partial class AstroContractClient : System.ServiceModel.ClientBase<ServiceReference1.IAstroContract>, ServiceReference1.IAstroContract
-    {
-        
-        public AstroContractClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress)
-        {
-        }
-        
-        public System.Threading.Tasks.Task<ServiceReference1.CalculateStarVelocityResponse> CalculateStarVelocityAsync(ServiceReference1.CalculateStarVelocityRequest request)
-        {
-            return base.Channel.CalculateStarVelocityAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ServiceReference1.CalculateStarDistanceResponse> CalculateStarDistanceAsync(ServiceReference1.CalculateStarDistanceRequest request)
-        {
-            return base.Channel.CalculateStarDistanceAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ServiceReference1.ConvertToKelvinResponse> ConvertToKelvinAsync(ServiceReference1.ConvertToKelvinRequest request)
-        {
-            return base.Channel.ConvertToKelvinAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ServiceReference1.CalculateEventHorizonResponse> CalculateEventHorizonAsync(ServiceReference1.CalculateEventHorizonRequest request)
-        {
-            return base.Channel.CalculateEventHorizonAsync(request);
-        }
-        
-        public virtual System.Threading.Tasks.Task OpenAsync()
-        {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
-        }
-    }
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel1.Svcutil", "2.1.0")]
 }

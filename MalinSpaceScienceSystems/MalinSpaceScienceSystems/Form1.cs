@@ -1,9 +1,14 @@
+using ServiceReference1;
 using System;
 using System.Drawing;
+using System.Dynamic;
 using System.Globalization;
-using System.Windows.Forms;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.Windows.Forms;
+using System.Threading.Tasks;
 namespace MalinSpaceScienceSystems
+
 
 {
     public partial class Form1 : Form
@@ -15,10 +20,12 @@ namespace MalinSpaceScienceSystems
             SetInitialSettings();
 
         }
-        private void InitializeLanguageComboBox()
+        public void InitializeLanguageComboBox()
         {
-            comboBoxLanguage.Items.AddRange(new string[] { "English", "French", "German" });
-            comboBoxLanguage.SelectedIndex = 0; // Default to English
+#pragma warning disable CA1861 // Avoid constant arrays as arguments
+            ComboBoxLanguage.Items.AddRange(new string[] { "English", "French", "German" });
+#pragma warning restore CA1861 // Avoid constant arrays as arguments
+           ComboBoxLanguage.SelectedIndex = 0; // Default to English
         }
 
         // Set initial settings for the form
@@ -28,34 +35,58 @@ namespace MalinSpaceScienceSystems
             labelTitle.ForeColor = Color.Black; // Default label color
         }
 
-        private void buttonCalculate_Click(object sender, EventArgs e)
+        private void ButtonCalculate_Click(object sender, EventArgs e)
         {
             // Clear previous error message
             textBoxErrorHandler.Text = string.Empty;
 
             try
             {
-                // Retrieve inputs
-                double velocity = Convert.ToDouble(textBoxStarVelocity.Text);
-                double distance = Convert.ToDouble(textBoxStarDistance.Text);
-                double mass = Convert.ToDouble(textBoxStarMass.Text);
-                double luminosity = Convert.ToDouble(textBoxStarLuminosity.Text);
+                // Create the WCF service proxy using NetTcpBinding
+                using (var factory = new ChannelFactory<IAstroContract>(
+                    new NetTcpBinding(), // Adjusted to NetTcpBinding
+                    new EndpointAddress("net.tcp://localhost/AstroService")))
+                {
+                    // Create the service channel to interact with the AstroServer
+                    IAstroContract astroService = factory.CreateChannel();
 
-                // Perform calculations (example calculations)
-                textBoxResultVelocity.Text = (velocity * 1.1).ToString(); // Example calculation
-                textBoxResultDistance.Text = (distance * 1.2).ToString(); // Example calculation
-                textBoxResultMass.Text = (mass * 1.3).ToString(); // Example calculation
-                textBoxResultLuminosity.Text = (luminosity * 1.4).ToString(); // Example calculation
+                    /// Retrieve inputs from textboxes
+                    if (double.TryParse(textBoxObservedWaveLength.Text, out double observedWaveLength) &&
+                        double.TryParse(textBoxStarRestWaveLength.Text, out double atRestWavelength) &&
+                        double.TryParse(textBoxParallaxAngle.Text, out double parallaxAngle) &&
+                        double.TryParse(textBoxBlackHoleMass.Text, out double blackHoleMass) &&
+                        double.TryParse(textBoxCelsius.Text, out double celsiusTemp))
+                    {
+                        // Perform calculations by calling methods on the WCF service
+                        var velocityTask = astroService.CalculateStarVelocityAsync(new CalculateStarVelocityRequest(observedWaveLength, atRestWavelength));
+                        var distanceTask = astroService.CalculateStarDistanceAsync(new CalculateStarDistanceRequest(parallaxAngle));
+                        var eventHorizonTask = astroService.CalculateEventHorizonAsync(new CalculateEventHorizonRequest(blackHoleMass));
+                        var kelvinTask = astroService.ConvertToKelvinAsync(new ConvertToKelvinRequest(celsiusTemp));
+                        // Wait for all tasks to complete and retrieve results
+
+                        // Display results in the textboxes
+                        textBoxResultVelocity.Text = velocityTask.ToString();
+                        textBoxResultDistance.Text = distanceTask.ToString();
+                        textBoxResultEventHorizon.Text = eventHorizonTask.ToString();
+                        textBoxResultKelvin.Text = kelvinTask.ToString();
+                    }
+                    else
+                    {
+                        textBoxErrorHandler.Text = "Error: Invalid input values.";
+                    }
+
+            // Close the channel once the operations are done
+            ((IClientChannel)astroService).Close();
+                }
             }
             catch (Exception ex)
             {
-                // Display error message
+
+               // Display any errors that occur during the process
                 textBoxErrorHandler.Text = "Error: " + ex.Message;
             }
-
         }
-
-        private void buttonBackgroundColor_Click(object sender, EventArgs e)
+        private void ButtonBackgroundColor_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -63,7 +94,7 @@ namespace MalinSpaceScienceSystems
             }
         }
 
-        private void buttonFontCustomization_Click(object sender, EventArgs e)
+        private void ButtonFontCustomization_Click(object sender, EventArgs e)
         {
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -89,10 +120,10 @@ namespace MalinSpaceScienceSystems
             }
         }
         // CheckBox CheckedChanged event for day/night mode
-        private void checkBoxNightMode_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxNightMode_CheckedChanged(object sender, EventArgs e)
         {
             // Change background color based on night mode status
-            if (checkBoxNightMode.Checked)
+            if (CheckBoxNightMode.Checked)
             {
                 this.BackColor = Color.Black; // Set form background to black
                 ChangeFontColor(Color.White); // Change font color to white
@@ -231,9 +262,10 @@ namespace MalinSpaceScienceSystems
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check if SelectedItem is not null before dereferencing it
-            if (comboBoxLanguage.SelectedItem is string selectedLanguage) // Ensure selectedLanguage is a string
+            if (ComboBoxLanguage.SelectedItem is string selectedLanguage) // Ensure selectedLanguage is a string
             {
                 // Update labels, buttons, and checkboxes based on selected language
+#pragma warning disable CA1854 // Prefer the 'IDictionary.TryGetValue(TKey, out TValue)' method
                 if (languageStrings.ContainsKey(selectedLanguage)) // Check for key existence
                 {
                     // Update title
@@ -254,14 +286,15 @@ namespace MalinSpaceScienceSystems
                     labelResultMass.Text = languageStrings[selectedLanguage]["ResultMass"];
 
                     // Update buttons
-                    buttonCalculate.Text = languageStrings[selectedLanguage]["ButtonCalculate"];
-                    buttonClear.Text = languageStrings[selectedLanguage]["ButtonClear"];
-                    buttonBackgroundColor.Text = languageStrings[selectedLanguage]["ButtonBackgroundColor"];
-                    buttonFontCustomization.Text = languageStrings[selectedLanguage]["ButtonFontCustomization"];
+                    ButtonCalculate.Text = languageStrings[selectedLanguage]["ButtonCalculate"];
+                    ButtonClear.Text = languageStrings[selectedLanguage]["ButtonClear"];
+                    ButtonBackgroundColor.Text = languageStrings[selectedLanguage]["ButtonBackgroundColor"];
+                    ButtonFontCustomization.Text = languageStrings[selectedLanguage]["ButtonFontCustomization"];
 
                     // Update checkbox
-                    checkBoxNightMode.Text = languageStrings[selectedLanguage]["CheckBoxNightMode"];
+                    CheckBoxNightMode.Text = languageStrings[selectedLanguage]["CheckBoxNightMode"];
                 }
+#pragma warning restore CA1854 // Prefer the 'IDictionary.TryGetValue(TKey, out TValue)' method
             }
         }
         
