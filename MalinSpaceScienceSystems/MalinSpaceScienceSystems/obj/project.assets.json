@@ -2771,24 +2771,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BrumertzTafe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\30085204\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BrumertzTafe\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems.csproj",
+      "projectUniqueName": "C:\\Users\\30085204\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems.csproj",
       "projectName": "MalinSpaceScienceSystems",
-      "projectPath": "C:\\Users\\BrumertzTafe\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems.csproj",
-      "packagesPath": "C:\\Users\\BrumertzTafe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BrumertzTafe\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\obj\\",
+      "projectPath": "C:\\Users\\30085204\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems.csproj",
+      "packagesPath": "C:\\Users\\30085204\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\30085204\\Downloads\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\MalinSpaceScienceSystems\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BrumertzTafe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\30085204\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2796,7 +2791,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2855,7 +2849,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
